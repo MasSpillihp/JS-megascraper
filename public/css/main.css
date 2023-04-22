@@ -1,0 +1,88 @@
+/* reset styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* global styles */
+body {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333;
+  background-color: #f5f5f5;
+  display: flex; /* set the flex container to the body */
+  flex-direction: column; /* stack flex items vertically */
+  min-height: 100vh; /* set a minimum height for the container */
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+ul {
+  list-style: none;
+}
+
+/* header styles */
+.header {
+  background-color: #fff;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+
+.nav-list {
+  display: flex;
+}
+
+.nav-item {
+  margin-right: 1rem;
+}
+
+.nav-link {
+  font-weight: 500;
+  padding: 0.5rem;
+  transition: color 0.2s ease-in-out;
+}
+
+.nav-link:hover {
+  color: #0077cc;
+}
+
+/* main styles */
+.main {
+  flex: 1; /* make the main section take up all remaining vertical space */
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  max-width: 800px;
+  margin: 100px auto 50px auto;
+  padding: 2rem;
+  background-color: #fff;
+  box-shadow: 0px 2px 5px;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: auto; /* push the footer to the bottom of the container */
+  margin-bottom: 10px;
+}

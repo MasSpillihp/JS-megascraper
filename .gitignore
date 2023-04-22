@@ -1,0 +1,5 @@
+20_links_NOHEADERS.csv
+node_modules/
+cases/
+.prettierignore
+.env

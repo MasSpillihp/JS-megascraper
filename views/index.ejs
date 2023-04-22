@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Link Checker</title>
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
+    <header class="header">
+      <nav class="navbar">
+        <ul class="nav-list">
+          <li class="nav-item"><a href="/" class="nav-link">Home</a></li>
+          <li class="nav-item"><a href="#" class="nav-link">Link 2</a></li>
+          <li class="nav-item"><a href="#" class="nav-link">Link 3</a></li>
+          <li class="nav-item"><a href="#" class="nav-link">Link 4</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main class="main">
+      <div class="card">
+        <h1 class="card-heading">MEGA link checker</h1>
+        <form
+          class="form"
+          method="post"
+          enctype="multipart/form-data"
+          action="/upload-file"
+        >
+          <div class="form-group">
+            <label for="case" class="form-label">Enter a case reference:</label>
+            <input type="text" id="case" name="case" class="form-input" />
+          </div>
+          <div class="form-group">
+            <label for="file" class="form-label">Upload a csv file:</label>
+            <input type="file" id="file" name="file" class="form-input" />
+          </div>
+          <button type="submit" class="btn">Submit</button>
+        </form>
+      </div>
+    </main>
+    <footer class="footer">
+      <p class="footer-text">Sam Phillips © 2023</p>
+    </footer>
+  </body>
+</html>
