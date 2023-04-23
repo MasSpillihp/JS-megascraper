@@ -1,5 +1,4 @@
 const multer = require("multer");
-const upload = multer({ dest: "cases/" });
 const csv = require("csv-parser");
 const fs = require("fs");
 const Url = require("../models/url");
@@ -14,7 +13,15 @@ exports.uploadFile = (req, res) => {
   const results = [];
   const caseref = req.body.case;
 
-  fs.createReadStream(req.file.path, { encoding: "utf-8" })
+  const caseFolder = `cases/${caseref}`;
+  if (!fs.existsSync(caseFolder)) {
+    fs.mkdirSync(caseFolder);
+  }
+  fs.renameSync(req.file.path, `${caseFolder}/${req.file.originalname}`);
+
+  fs.createReadStream(`${caseFolder}/${req.file.originalname}`, {
+    encoding: "utf-8",
+  })
     .pipe(csv({ headers: ["url"] }))
     .on("data", (data) => {
       results.push(data.url);
