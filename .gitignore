@@ -3,3 +3,6 @@ node_modules/
 cases/
 .prettierignore
 .env
+
+working_mega_links.csv
+closed_mega_links.csv

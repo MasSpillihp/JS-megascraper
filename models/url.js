@@ -16,6 +16,14 @@ const Url = sequelize.define("url", {
     type: Sequelize.STRING,
     allowNull: false,
   },
+  result: {
+    type: Sequelize.STRING,
+    allowNull: true,
+  },
+  result_reason: {
+    type: Sequelize.STRING(1000),
+    allowNull: true,
+  },
 });
 
 module.exports = Url;

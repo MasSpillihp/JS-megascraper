@@ -14,7 +14,7 @@ exports.uploadFile = (req, res) => {
   const results = [];
   const caseref = req.body.case;
 
-  fs.createReadStream(req.file.path)
+  fs.createReadStream(req.file.path, { encoding: "utf-8" })
     .pipe(csv({ headers: ["url"] }))
     .on("data", (data) => {
       results.push(data.url);
